@@ -11,8 +11,7 @@ streamlit.text('Omega 3 & Blueberry Oatmeal')
 streamlit.text('Kale, Spinach & Rocket Smoothie')
 streamlit.text('Hard-Boiled Free-Range Egg')
 
-streamlit.header('\xf0\x9f\x8d\x8c\xf0\x9f\xa5\xad Build Your Own Fruit Smoothie \xf0\x9f\xa5\x9d\xf0\x9f\x8d\x87'
-                 )
+streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
 my_fruit_list = \
     pandas.read_csv('https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt'
@@ -22,8 +21,6 @@ fruits_selected = streamlit.multiselect('pick some fruits:',
         list(my_fruit_list.index), ['Avocado', 'Strawberries'])
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
-add_my_fruit = \
-    streamlit.text_input('What fruit would you like information about?')
 
 
 def get_fruityvice_data(this_fruit_choice):
